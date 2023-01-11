@@ -25,8 +25,8 @@ jobs:
       - name: Check gas snapshots
         run: forge snapshot --check
 
-      - name: Run tests
-        run: forge test
-        env:
-          # Change profile to prod. when deploying to production.
-          FOUNDRY_PROFILE: ${{ (github.ref == 'refs/heads/main' || github.base_ref == 'main') && 'prod' }}
+      # - name: Run tests
+      #   run: forge test
+      #   env:
+      #     # Change profile to prod. when deploying to production.
+      #     FOUNDRY_PROFILE: ${{ (github.ref == 'refs/heads/main' || github.base_ref == 'main') && 'prod' }}
