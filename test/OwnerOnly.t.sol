@@ -33,4 +33,10 @@ contract TestOwnerOnly is Test {
         ownerOnly.increment();
         assertEq(ownerOnly.count(), 1);
     }
+
+    function testIncrementAsNotOwner() public {
+        vm.expectRevert(Unauthorized.selector);
+        vm.prank(address(0));
+        ownerOnly.increment();
+    }
 }
