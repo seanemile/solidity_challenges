@@ -26,8 +26,6 @@ contract Storage {
 }
 
 contract TestStorage is Test {
-    using console for *;
-
     Storage public store;
 
     function setUp() public {
