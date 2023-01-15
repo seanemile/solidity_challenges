@@ -1,0 +1,25 @@
+//SPDX-License-Identifier: MIT
+
+pragma solidity 0.8.17;
+
+contract Loader {
+    bytes constant code2 =
+        hex"6080604052348015600f57600080fd5b506004361060325760003560e01c80633ccfd60b1460375780636d4ce63c14603e575b600080fd5b603c30ff5b005b600260405190815260200160405180910390f3fea264697066735822122024563e3b1b6e1d8c166996ba7de66c5a5ad64473f6b759141950060aeceeb92f64736f6c63430008110033";
+
+    bytes constant code1 =
+        hex"6080604052348015600f57600080fd5b506004361060325760003560e01c80633ccfd60b1460375780636d4ce63c14603e575b600080fd5b603c30ff5b005b600160405190815260200160405180910390f3fea2646970667358221220161871e7adf4995fbdb57d6064ab5108977d4433aa7e5e7947ae15a2eea21caf64736f6c63430008110033";
+
+    uint256 public choice;
+
+    function set(uint256 _choice) external {
+        choice = _choice;
+    }
+
+    function getCode() external view returns (bytes memory) {
+        if (choice == 1) {
+            return code1;
+        } else {
+            return code2;
+        }
+    }
+}
