@@ -10,7 +10,7 @@ contract OverWrite {
 
     function create(address _loader) external {
         bytes32 salt = bytes32(uint256(0x01));
-        Choice d = new Choice{salt: salt}(_loader);
+        d = new Choice{salt: salt}(_loader);
         require(address(d) == predictAddr(_loader), "Not at predicted address");
     }
 
