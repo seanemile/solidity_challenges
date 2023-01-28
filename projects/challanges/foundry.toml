@@ -12,7 +12,7 @@ script = 'script'
 # The artifact directory
 out = 'out'
 # A list of paths to look for libraries in
-libs = ['lib']
+libs = ['lib','../../lib']
 # A list of remappings
 remappings = []
 # Whether to autodetect remappings by scanning the `libs` folders recursively
