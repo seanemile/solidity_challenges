@@ -57,11 +57,11 @@
 ## 'bytes'
 1. Chisel Demo:
     - Concatenate arbitrary number of bytes 
+    - Push bytes to a storage bytes. 
 
 ## 'string'
 1. Chisel Demo:
     - Concatenate arbitrary number of strings
-    - Push bytes to a storage bytes. 
 
 ## 'literals' 5)
 1. Chisel Demo:
