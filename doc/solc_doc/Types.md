@@ -142,5 +142,8 @@
     - Demonstrate mutiple accesses to a bytes array in storage while simultaneously enlarging it with a tuple.
 
 ## Array Slices.
+1. [Code Challenge](Proxy.sol)
+    - User array slices in proxy like contract to retrive the function selector compare it to known selector if it matches do sth.  
 
-
+## Structs
+1. 
