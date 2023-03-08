@@ -2,11 +2,11 @@
 pragma solidity 0.8.19;
 
 contract Dangling {
-    uint[][] s;
+    uint256[][] s;
 
     function f() public {
         // Stores a pointer to the last array element of s.
-        uint[] storage ptr = s[s.length - 1];
+        uint256[] storage ptr = s[s.length - 1];
         // Removes the last array element of s.
         s.pop();
         // Writes to the array element that is no longer within the array.

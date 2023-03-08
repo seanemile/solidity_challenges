@@ -2,20 +2,21 @@
 pragma solidity 0.8.19;
 
 contract DanglingTuple {
-    uint[] s;
-    uint[] t;
+    uint256[] s;
+    uint256[] t;
+
     constructor() {
         // Push some initial values to the storage arrays.
         s.push(0x07);
         t.push(0x03);
     }
 
-    function g() internal returns (uint[] storage) {
+    function g() internal returns (uint256[] storage) {
         s.pop();
         return t;
     }
 
-    function f() public returns (uint[] memory) {
+    function f() public returns (uint256[] memory) {
         // The following will first evaluate ``s.push()`` to a reference to a new element
         // at index 1. Afterwards, the call to ``g`` pops this new element, resulting in
         // the left-most tuple element to become a dangling reference. The assignment still
