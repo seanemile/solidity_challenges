@@ -6,24 +6,24 @@ import "forge-std/Test.sol";
 contract ForkTest is Test {
     // the identifiers of the forks
     uint256 mainnetFork;
-    uint256 goerliFork;
+    uint256 sepoliaFork;
 
     //Access variables from .env file via vm.envString("varname")
     //Replace ALCHEMY_KEY by your alchemy key or Etherscan key, change RPC url if need
     //inside your .env file e.g:
     //MAINNET_RPC_URL = 'https://eth-mainnet.g.alchemy.com/v2/ALCHEMY_KEY'
     string MAINNET_RPC_URL = vm.envString("MAINNET_RPC_URL");
-    string GOERLI_RPC_URL = vm.envString("GOERLI_RPC_URL");
+    string SEPOLIA_RPC_URL = vm.envString("SEPOLIA_RPC_URL");
 
     // create two _different_ forks during setup
     function setUp() public {
         mainnetFork = vm.createFork(MAINNET_RPC_URL);
-        goerliFork = vm.createFork(GOERLI_RPC_URL);
+        sepoliaFork = vm.createFork(SEPOLIA_RPC_URL);
     }
 
     // demonstrate fork ids are unique
     function testForkIdDiffer() public {
-        assert(mainnetFork != goerliFork);
+        assert(mainnetFork != sepoliaFork);
     }
 
     // select a specific fork
@@ -40,8 +40,8 @@ contract ForkTest is Test {
         vm.selectFork(mainnetFork);
         assertEq(vm.activeFork(), mainnetFork);
 
-        vm.selectFork(goerliFork);
-        assertEq(vm.activeFork(), goerliFork);
+        vm.selectFork(sepoliaFork);
+        assertEq(vm.activeFork(), sepoliaFork);
     }
 
     // forks can be created at all times
