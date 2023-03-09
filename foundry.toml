@@ -48,7 +48,7 @@ optimizer = true
 # The number of optimizer runs
 optimizer_runs = 200
 # The verbosity of tests
-verbosity = 5
+verbosity = 1
 # A list of ignored solc error codes
 ignored_error_codes = [1878, 5574]
 # Configures the permissions of cheat codes that touch the file system

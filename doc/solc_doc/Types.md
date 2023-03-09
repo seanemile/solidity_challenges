@@ -14,7 +14,8 @@
 ## 'Bool' 
 1. Chisel Demo: 
     - Declare a boolean 
-    - Perform five logical operations on the boolean.
+    - Perform 3 logical operations on the boolean.
+    - Relational 2 operation.
 
 ## 'Integers'
 1. chisel Demo:
