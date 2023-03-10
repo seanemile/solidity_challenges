@@ -22,7 +22,7 @@ contract ForkTest is Test {
     }
 
     // demonstrate fork ids are unique
-    function testForkIdDiffer() public {
+    function testForkIdDiffer() public view {
         assert(mainnetFork != sepoliaFork);
     }
 

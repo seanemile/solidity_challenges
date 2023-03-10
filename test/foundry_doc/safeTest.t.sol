@@ -31,6 +31,16 @@ contract SafeTest is Test {
     }
 
     function testWithdraw1(uint96 amount) public {
+        vm.assume(amount > 0.1 ether);
+        payable(address(safe)).transfer(amount);
+        uint256 preBalance = address(this).balance;
+        safe.withdraw();
+        uint256 postBalance = address(this).balance;
+        assertEq(preBalance + amount, postBalance);
+    }
+
+    function testWithdraw2(uint96 amount) public {
+        vm.assume(amount > 0.1 ether);
         payable(address(safe)).transfer(amount);
         uint256 preBalance = address(this).balance;
         safe.withdraw();
