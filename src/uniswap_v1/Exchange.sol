@@ -1,4 +1,8 @@
 // SPDX-License-Identifier: MIT
+/*
+  * @author: https://jeiwan.net/posts/programming-defi-uniswap-1/
+* @notice: This is a simplified version of Uniswap v1 exchange contract
+  */
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
